@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Anniversary love 💙</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Georgia, serif;
+    background: linear-gradient(135deg, #dff4ff, #b9ddf5, #eaf7ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 15px;
+    color: #315779;
+    overflow-x: hidden;
+}
+
+.background-hearts span {
+    position: fixed;
+    bottom: -50px;
+    font-size: 25px;
+    color: white;
+    animation: float 10s linear infinite;
+    pointer-events: none;
+}
+
+.background-hearts span:nth-child(1) { left: 10%; }
+.background-hearts span:nth-child(2) { left: 30%; animation-delay: 2s; }
+.background-hearts span:nth-child(3) { left: 50%; animation-delay: 4s; }
+.background-hearts span:nth-child(4) { left: 70%; animation-delay: 1s; }
+.background-hearts span:nth-child(5) { left: 85%; animation-delay: 3s; }
+.background-hearts span:nth-child(6) { left: 95%; animation-delay: 5s; }
+
+@keyframes float {
+    0% { transform: translateY(0); opacity: 0; }
+    20% { opacity: 0.8; }
+    100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
+}
+
+.container {
+    width: 100%;
+    max-width: 650px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.opening, .letter {
+    background: rgba(255,255,255,0.95);
+    padding: 40px 25px;
+    border-radius: 25px;
+    box-shadow: 0 10px 35px rgba(50,100,150,0.15);
+}
+
+.envelope {
+    font-size: 80px;
+    margin-bottom: 20px;
+    animation: gentle 2s infinite ease-in-out;
+}
+
+@keyframes gentle {
+    50% { transform: translateY(-10px); }
+}
+
+.opening h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.opening p {
+    color: #6c8eac;
+    margin-bottom: 25px;
+}
+
+button {
+    border: none;
+    background: #6da9d5;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 30px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #397eae;
+    transform: translateY(-3px);
+}
+
+.hidden {
+    display: none;
+}
+
+.fade-in {
+    animation: fadeIn 1s ease forwards;
+}
+
+.fade-out {
+    animation: fadeOut 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(20px); }
+}
+
+.header span {
+    color: #82afd2;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.header h1 {
+    margin: 15px 0 8px;
+    font-size: 35px;
+}
+
+.header p {
+    color: #7798b5;
+    margin-bottom: 25px;
+}
+
+.slide {
+    display: none;
+    animation: fadeIn 0.7s ease;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide img {
+    width: 100%;
+    max-width: 380px;
+    height: 300px;
+    object-fit: cover;
+    border: 7px solid #e3f2fc;
+    border-radius: 18px;
+    margin-bottom: 20px;
+}
+
+.slide h2 {
+    color: #447da8;
+    margin-bottom: 15px;
+}
+
+.slide p {
+    color: #607e99;
+    line-height: 1.9;
+    font-size: 15px;
+    max-width: 450px;
+    margin: 0 auto 25px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.navigation button {
+    padding: 11px 17px;
+    font-size: 12px;
+}
+
+#slideNumber {
+    color: #6287a6;
+    font-size: 13px;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.dot {
+    width: 9px;
+    height: 9px;
+    background: #c4dfef;
+    border-radius: 50%;
+}
+
+.active-dot {
+    background: #508fc1;
+    transform: scale(1.3);
+}
+
+.close-button {
+    background: #9bbdd9;
+    margin-top: 15px;
+}
+
+.close-button:hover {
+    background: #527fa5;
+}
+
+.footer {
+    color: #86a9c4;
+    margin-top: 20px;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 480px) {
+    .opening, .letter {
+        padding: 30px 15px;
+    }
+
+    .opening h1 {
+        font-size: 25px;
+    }
+
+    .slide img {
+        height: 230px;
+    }
+
+    .navigation {
+        gap: 8px;
+    }
+
+    .navigation button {
+        padding: 10px 12px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="background-hearts">
+    <span>♡</span>
+    <span>💙</span>
+    <span>♡</span>
+    <span>✧</span>
+    <span>♡</span>
+    <span>💙</span>
+</div>
+
+<main class="container">
+
+    <!-- OPENING PAGE -->
+    <section class="opening" id="opening">
+        <div class="envelope">💌</div>
+
+        <h1>A Special Letter For You</h1>
+
+        <p>Someone prepared something special for you.</p>
+
+        <button onclick="openLetter()">
+            Open My Letter ♡
+        </button>
+    </section>
+
+    <!-- LETTER PAGE -->
+    <section class="letter hidden" id="letter">
+
+        <div class="header">
+            <span>♡ A LITTLE SOMETHING FOR YOU ♡</span>
+            <h1>Dear You,</h1>
+            <p>Four pictures, four little memories.</p>
+        </div>
+
+        <!-- FIRST PICTURE -->
+        <div class="slide active">
+            <img src="picture1.jpg.jpg" alt="First picture">
+            <h2>First Memory ♡</h2>
+            <p>
+                Happy anniversary, my love! I just want to say how grateful I am to
+                have you in my life. You make me happy every day, thank you for 
+                being my partner II love you so much! 💙
+            </p>
+        </div>
+
+        <!-- SECOND PICTURE -->
+        <div class="slide">
+            <img src="picture2.jpg.jpg" alt="Second picture">
+            <h2>Little Things ✨</h2>
+            <p>
+                salamat dahil hindi mo ako iniwan sa kabila ng lahat ng kasalanan ko,
+                salamat sa lahat ng mga pinagsamahan natin, yung mga away natin na 
+                nagpatibay sa atin, yung mga tawanan natin na ang sarrap pakinggan
+                thank you dahil sa tuwing napapagod ako nandyan ka para bigyan ako ng lakas.
+            </p>
+        </div>
+
+        <!-- THIRD PICTURE -->
+        <div class="slide">
+            <img src="picture3.jpg.jpg" alt="Third picture">
+            <h2>A Special Reminder 💙</h2>
+            <p>
+                sana lahat ng pangarap natin ay matupad at 
+                sana lagi tayong magkasama sa hirap at ginhawa,
+                sana llagi nating piliin ang isa't isa pag nagkakaroon
+                tayo ng hindi pagkakaunawaan.
+            </p>
+        </div>
+
+        <!-- FOURTH PICTURE -->
+        <div class="slide">
+            <img src="picture4.jpg.jpg" alt="Fourth picture">
+            <h2>Until Next Time ♡</h2>
+            <p>
+                I Love you so much, my love! I hope you enjoyed this little
+                surprise I made for you. I can't wait to make more memoriees
+                with you and celebrate more anniversaries with you.
+            </p>
+        </div>
+
+        <!-- SLIDE BUTTONS -->
+        <div class="navigation">
+            <button id="prevBtn" onclick="changeSlide(-1)">
+                ← Previous
+            </button>
+
+            <span id="slideNumber">1 / 4</span>
+
+            <button id="nextBtn" onclick="changeSlide(1)">
+                Next →
+            </button>
+        </div>
+
+        <!-- SLIDE INDICATORS -->
+        <div class="dots">
+            <span class="dot active-dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+        <!-- CLOSE BUTTON -->
+        <button class="close-button" onclick="closeLetter()">
+            Close Letter ✉
+        </button>
+
+        <p class="footer">Made with love ♡</p>
+
+    </section>
+
+</main>
+
+<script>
+let currentSlide = 0;
+
+const slides = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot");
+
+function openLetter() {
+    const opening = document.getElementById("opening");
+    const letter = document.getElementById("letter");
+
+    opening.classList.add("hidden");
+
+    letter.classList.remove("hidden");
+    letter.classList.remove("fade-out");
+
+    currentSlide = 0;
+    showSlide(currentSlide);
+
+    letter.classList.add("fade-in");
+}
+
+function closeLetter() {
+    const opening = document.getElementById("opening");
+    const letter = document.getElementById("letter");
+
+    letter.classList.remove("fade-in");
+    letter.classList.add("fade-out");
+
+    setTimeout(() => {
+        letter.classList.add("hidden");
+        letter.classList.remove("fade-out");
+
+        opening.classList.remove("hidden");
+        opening.classList.add("fade-in");
+
+        currentSlide = 0;
+        showSlide(currentSlide);
+    }, 400);
+}
+
+function showSlide(index) {
+    slides.forEach(slide => {
+        slide.classList.remove("active");
+    });
+
+    dots.forEach(dot => {
+        dot.classList.remove("active-dot");
+    });
+
+    slides[index].classList.add("active");
+    dots[index].classList.add("active-dot");
+
+    document.getElementById("slideNumber").textContent =
+        `${index + 1} / ${slides.length}`;
+
+    document.getElementById("prevBtn").disabled =
+        index === 0;
+
+    document.getElementById("nextBtn").disabled =
+        index === slides.length - 1;
+
+    document.getElementById("prevBtn").style.opacity =
+        index === 0 ? "0.5" : "1";
+
+    document.getElementById("nextBtn").style.opacity =
+        index === slides.length - 1 ? "0.5" : "1";
+}
+
+function changeSlide(direction) {
+    const nextIndex = currentSlide + direction;
+
+    if (nextIndex >= 0 && nextIndex < slides.length) {
+        currentSlide = nextIndex;
+        showSlide(currentSlide);
+    }
+}
+
+showSlide(currentSlide);
+</script>
+
+</body>
+</html>
